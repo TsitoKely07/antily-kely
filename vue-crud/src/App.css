@@ -1,0 +1,128 @@
+.app-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.app-nav a {
+  font-weight: 600;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+.btn:hover {
+  background: #1d4ed8;
+}
+.btn.secondary {
+  background: #fff;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+.btn.secondary:hover {
+  background: #f1f5f9;
+}
+.btn.danger {
+  background: #fff;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+.btn.danger:hover {
+  background: #fef2f2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+th {
+  background: #f1f5f9;
+  font-weight: 600;
+}
+tr:last-child td {
+  border-bottom: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 480px;
+}
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+form input {
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.empty-state {
+  color: #64748b;
+  font-size: 14px;
+  padding: 24px 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Bloc maître-détail (fiche de modification) : lignes rattachées à l'enregistrement en cours,
+   ex. les lignes d'une commande gérées directement depuis sa fiche.
+--------------------------------------------------------------------------- */
+
+.detail-block {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.detail-block h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 16px;
+}
