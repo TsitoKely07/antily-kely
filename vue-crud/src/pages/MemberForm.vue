@@ -43,6 +43,26 @@ const handleSubmit = async () => {
     phone: values.phone,
   };
   try {
+    if (values.dateOfBirth) {
+      const members = await apiClient.list<{
+        id: string;
+        dateOfBirth?: string | null;
+      }>('member');
+      const duplicate = members.some((member) =>
+        member.id !== id &&
+        String(member.dateOfBirth ?? '').slice(0, 10) === String(values.dateOfBirth),
+      );
+
+      if (
+        duplicate &&
+        !window.confirm(
+          'Une personne possède déjà cette date de naissance. Voulez-vous continuer ?',
+        )
+      ) {
+        return;
+      }
+    }
+
     if (isEdit && id) await apiClient.update('member', id, payload);
     else await apiClient.create('member', payload);
     router.push('/member');
