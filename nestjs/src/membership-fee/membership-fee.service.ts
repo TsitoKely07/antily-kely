@@ -31,8 +31,8 @@ export class MembershipFeeService {
     return entity;
   }
 
-  async update(id: string | number, dto: UpdateMembershipFeeDto) {
-    const entity = await this.findOne(id);
+  async update (_id: string | number, dto: UpdateMembershipFeeDto) {
+    const entity = await this.findOne(_id);
     const { membershipYearId, id, roleId, ...rest } = dto as any;
     Object.assign(entity, rest);
     if (membershipYearId !== undefined) entity.membershipYear = { id: membershipYearId } as any;
